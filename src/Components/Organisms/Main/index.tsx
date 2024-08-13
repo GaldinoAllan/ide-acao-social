@@ -1,11 +1,22 @@
+"use client";
+
 import Image from 'next/image';
 import titleImage from '../../../assets/Natal2024Title.png';
 import adBelemImage from '../../../assets/adBelemLogo.png';
 import jesusImage from '../../../assets/jesus.png';
 
 import styles from "./styles.module.scss"
+import { Button } from '../../Atoms/Button';
 
 export const Main = () => {
+  const handleContributeClick = () => {
+    console.log('Contribute button clicked')
+  }
+
+  const handlePDFClick = () => {
+    console.log('Contribute button clicked')
+  }
+
   return (
     <div className={styles.background}>
       <div className={styles.content}>
@@ -15,6 +26,10 @@ export const Main = () => {
             alt="Ide: Ação Social de Natal - O Amor que nos chaou a servir - 1 João 4:19"
             width={800}
           />
+          <div className={styles.buttonContainer}>
+            <Button text="Como contribuir" onClick={() => handleContributeClick} />
+            <Button text="PDF" onClick={() => handlePDFClick} />
+          </div>
           <Image
             src={adBelemImage}
             alt="Logo Assembléia de Deus ministério Belém"

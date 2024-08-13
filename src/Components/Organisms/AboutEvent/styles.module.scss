@@ -3,14 +3,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
-  background-image: url('../../../assets/acaoSocialBackground.png');
-  background-size: cover;
-  background-position: center;
-  
-  transform: rotate(180deg) scaleX(-1);
-  height: 100vh;
   width: 100vw;
+
+  // transform: rotate(180deg) scaleX(-1);
 }
 
 .content {
@@ -19,7 +14,7 @@
   justify-content: space-between;
   flex-direction: row;
   padding: 16px;
-  min-height: 100vh;
+  // min-height: 100vh;
   max-width: 1440px;
   border: 1px solid greenyellow;
 }
