@@ -1,24 +1,16 @@
-import { randomUUID } from "crypto"
-import { StaticImageData } from "next/image"
+import { ImageInterface, Images } from "../../../assets/Image"
 import { Strings } from "../../../Helpers/Strings"
-import Image from '../../../assets/Image'
 import { PolaroidImage } from "../../Atoms/PolaroidImage"
 import styles from "./styles.module.scss"
 
-interface AboutEventImageInterface {
-  id: string;
-  src: StaticImageData;
-  caption?: string;
-  imageAlt: string;
-}
-
 export const AboutEvent = () => {
-  const images: AboutEventImageInterface[] = [
-    { id: randomUUID(), src: Image.abracoCoracao, imageAlt: "Image 1" },
-    { id: randomUUID(), src: Image.carrinhoAlegria, caption: "Caption 2", imageAlt: "Image 2" },
-    { id: randomUUID(), src: Image.corteCabelo, imageAlt: "Image 3" },
-    { id: randomUUID(), src: Image.doces, caption: "Caption 4", imageAlt: "Image 4" },
+  const images: ImageInterface[] = [
+    Images.abracoCoracao,
+    Images.carrinhoAlegria,
+    Images.corteCabelo,
+    Images.doces,
   ]
+
   return (
     <div className={styles.background}>
       <div className={styles.content}>
