@@ -15,7 +15,7 @@ export const PolaroidImage: React.FC<PolaroidProps> = ({ imageSrc, imageAlt, cap
         <Image
           src={imageSrc}
           alt={`Polaroid ${imageAlt}`}
-          objectFit='cover'
+          style={{ objectFit: 'cover' }}
           fill
         />
       </div>

@@ -1,0 +1,56 @@
+
+.background {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 16px;
+  max-width: 1440px;
+}
+
+.titleContainer {
+  display: grid;
+  grid-template-columns: 4fr 1.5fr;
+  gap: 64px;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: white;
+}
+
+.description {
+  font-size: 24px;
+  color: white;
+}
+
+.buttonContainer {
+  margin-top: 64px;
+  flex: 1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.buttonContent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  width: 400px;
+}
+
+.imageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
