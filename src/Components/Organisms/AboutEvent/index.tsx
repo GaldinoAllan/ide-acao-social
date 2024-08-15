@@ -14,10 +14,10 @@ interface AboutEventImageInterface {
 
 export const AboutEvent = () => {
   const images: AboutEventImageInterface[] = [
-    { id: randomUUID(), src: Image.acaoSocialTeste, imageAlt: "Image 1" },
-    { id: randomUUID(), src: Image.acaoSocialTeste, caption: "Caption 2", imageAlt: "Image 2" },
-    { id: randomUUID(), src: Image.acaoSocialTeste, imageAlt: "Image 3" },
-    { id: randomUUID(), src: Image.acaoSocialTeste, caption: "Caption 4", imageAlt: "Image 4" },
+    { id: randomUUID(), src: Image.abracoCoracao, imageAlt: "Image 1" },
+    { id: randomUUID(), src: Image.carrinhoAlegria, caption: "Caption 2", imageAlt: "Image 2" },
+    { id: randomUUID(), src: Image.corteCabelo, imageAlt: "Image 3" },
+    { id: randomUUID(), src: Image.doces, caption: "Caption 4", imageAlt: "Image 4" },
   ]
   return (
     <div className={styles.background}>
