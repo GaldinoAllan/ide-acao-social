@@ -1,9 +1,12 @@
 .footer {
   margin-top: 128px;
   background-color: #7c3c1eac;
-  padding: 20px 0;
-  text-align: center;
-  width: 100%;
+  padding: 20px;
+  width: 100vw;
+
+  @media (min-width: 860px) {
+    padding: 20px 0;
+  }
 }
 
 .content {
@@ -20,7 +23,10 @@
 
 .iconLink {
   color: #fff;
-  margin-right: 64px;
+
+  @media (min-width: 860px) {
+    margin-right: 64px;
+  }
 }
 
 .copyright {

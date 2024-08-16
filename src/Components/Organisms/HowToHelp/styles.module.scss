@@ -1,25 +1,25 @@
 
 .background {
   margin-top: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
+  padding: 20px;
+
+  @media (min-width: 860px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
 }
 
 .content {
-  display: flex;
-  flex: 1;
-  justify-content: space-between;
-  flex-direction: column;
-  padding: 16px;
   max-width: 1440px;
-}
-
-.titleContainer {
   display: grid;
-  grid-template-columns: 4fr 1.5fr;
+  grid-template-columns: 1fr;
   gap: 64px;
+
+  @media (min-width: 860px) {
+    grid-template-columns: 4fr 1.5fr;  
+  }
 }
 
 .title {
@@ -36,10 +36,14 @@
 
 .buttonContainer {
   margin-top: 64px;
-  flex: 1;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 860px) {
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
 }
 
 .buttonContent {

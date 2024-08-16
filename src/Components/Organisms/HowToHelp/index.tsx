@@ -17,24 +17,22 @@ export const HowToHelp = () => {
   return (
     <div className={styles.background}>
       <div className={styles.content}>
-        <div className={styles.titleContainer}>
-          <div>
-            <h1 className={styles.title}>{Strings.HowToHelpTitle}</h1>
-            <p className={styles.description}>{Strings.HowToHelpDescription}</p>
-            <div className={styles.buttonContainer}>
-              <div className={styles.buttonContent}>
-                <Button text="Quero ser voluntário" onClick={handleVolunteerHelpButtonClick} />
-                <Button text="Quero ajudar de outra forma" onClick={handleHelpButtonClick} styleType="secondary" />
-              </div>
+        <div>
+          <h1 className={styles.title}>{Strings.HowToHelpTitle}</h1>
+          <p className={styles.description}>{Strings.HowToHelpDescription}</p>
+          <div className={styles.buttonContainer}>
+            <div className={styles.buttonContent}>
+              <Button text="Quero ser voluntário" onClick={handleVolunteerHelpButtonClick} />
+              <Button text="Quero ajudar de outra forma" onClick={handleHelpButtonClick} styleType="secondary" />
             </div>
           </div>
-          <div className={styles.imageContainer}>
-            <PolaroidImage
-              imageSrc={Images.helpImage.src}
-              imageAlt={Images.helpImage.imageAlt}
-              caption={Images.helpImage.caption}
-            />
-          </div>
+        </div>
+        <div className={styles.imageContainer}>
+          <PolaroidImage
+            imageSrc={Images.helpImage.src}
+            imageAlt={Images.helpImage.imageAlt}
+            caption={Images.helpImage.caption}
+          />
         </div>
       </div>
     </div>
