@@ -1,4 +1,5 @@
 import { AboutEvent } from "../Components/Organisms/AboutEvent";
+import Footer from "../Components/Organisms/Footer";
 import { HowToHelp } from "../Components/Organisms/HowToHelp";
 import { Main } from "../Components/Organisms/Main";
 import styles from "./styles.module.scss";
@@ -10,6 +11,7 @@ export default function Home() {
         <Main />
         <AboutEvent />
         <HowToHelp />
+        <Footer />
       </div>
     </main>
   );
