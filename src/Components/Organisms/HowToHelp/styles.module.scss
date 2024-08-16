@@ -2,13 +2,10 @@
 .background {
   margin-top: 64px;
   padding: 20px;
-
-  @media (min-width: 860px) {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
 
 .content {

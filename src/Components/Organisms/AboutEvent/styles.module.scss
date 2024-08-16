@@ -1,6 +1,7 @@
 
 .background {
   margin-top: 64px;
+  padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,12 +9,11 @@
 }
 
 .content {
+  max-width: 1440px;
   display: flex;
   flex: 1;
   justify-content: space-between;
   flex-direction: column;
-  padding: 16px;
-  max-width: 1440px;
 }
 
 .title {
@@ -29,15 +29,19 @@
 }
 
 .imagesWrapper {
+  margin: 64px 0px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 64px 0px;
 }
 
 .imagesContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: space-evenly;
   gap: 32px;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 860px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

@@ -21,20 +21,25 @@ export const Main = () => {
     <div className={styles.background}>
       <div className={styles.content}>
         <aside className={styles.rightContent}>
-          <Image
-            src={titleImage}
-            alt="Ide: Ação Social de Natal - O Amor que nos chaou a servir - 1 João 4:19"
-            width={800}
-          />
+          <div className={styles.imageTest}>
+            <Image
+              src={titleImage}
+              alt="Ide: Ação Social de Natal - O Amor que nos chaou a servir - 1 João 4:19"
+              style={{ width: '100%', objectFit: 'contain' }}
+
+            />
+          </div>
           <div className={styles.buttonContainer}>
             <Button text="Como contribuir" onClick={() => handleContributeClick} />
-            <Button text="PDF" onClick={() => handlePDFClick} />
+            <Button text="PDF" onClick={() => handlePDFClick} styleType='secondary' />
           </div>
-          <Image
-            src={adBelemImage}
-            alt="Logo Assembléia de Deus ministério Belém"
-            width={400}
-          />
+          <div className={styles.adBelemLogoContainer}>
+            <Image
+              src={adBelemImage}
+              alt="Logo Assembléia de Deus ministério Belém"
+              width={400}
+            />
+          </div>
         </aside>
         <aside className={styles.leftContent}>
           <Image
