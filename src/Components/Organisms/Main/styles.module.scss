@@ -1,9 +1,11 @@
 
 .background {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
+  height: 100vh;
   padding: 20px;
 }
 
@@ -52,4 +54,11 @@
     justify-content: center;
     align-items: flex-end;  
   }
+}
+
+.downArrows {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  color: white;
 }

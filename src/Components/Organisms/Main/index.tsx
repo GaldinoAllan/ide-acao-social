@@ -1,6 +1,8 @@
 "use client";
 
 import Image from 'next/image';
+import { FaChevronDown } from 'react-icons/fa';
+
 import titleImage from '../../../assets/Natal2024Title.png';
 import adBelemImage from '../../../assets/adBelemLogo.png';
 import jesusImage from '../../../assets/jesus.png';
@@ -14,7 +16,7 @@ export const Main = () => {
   }
 
   const handlePDFClick = () => {
-    console.log('Contribute button clicked')
+    console.log('PDF button clicked')
   }
 
   return (
@@ -48,6 +50,10 @@ export const Main = () => {
             width={500}
           />
         </aside>
+      </div>
+      <div className={styles.downArrows}>
+        <FaChevronDown />
+        <FaChevronDown />
       </div>
     </div>
   )
