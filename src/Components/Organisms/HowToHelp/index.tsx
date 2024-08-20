@@ -15,7 +15,7 @@ export const HowToHelp = () => {
   }
 
   return (
-    <div className={styles.background}>
+    <div className={styles.background} id="como_ajudar">
       <div className={styles.content}>
         <div>
           <h1 className={styles.title}>{Strings.HowToHelpTitle}</h1>

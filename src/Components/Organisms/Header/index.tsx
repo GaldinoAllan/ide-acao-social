@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { FiChevronDown, FiX, FiMenu, FiChevronUp } from 'react-icons/fi'
 import Link from "next/link";
 
@@ -15,14 +15,6 @@ import Image from 'next/image';
 export function Header() {
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
-
-  const [asPath, setCurrentUrl] = useState<string>();
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setCurrentUrl(window.location.pathname);
-    }
-  }, []);
 
   function handleMenuClick() {
     setIsClicked(!isClicked);
@@ -60,7 +52,6 @@ export function Header() {
         <nav className={isClicked ? styles.menuIsOpen : ""}>
           <ActiveLink
             activeClassName={styles.active}
-            currentPath={asPath}
             href={HeaderContent.inicio.href}
             legacyBehavior
           >
@@ -83,7 +74,6 @@ export function Header() {
           {HeaderContent.items.map((item) => (
             <ActiveLink
               activeClassName={styles.active}
-              currentPath={asPath}
               href={item.href}
               key={item.title}
               legacyBehavior

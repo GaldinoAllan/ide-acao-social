@@ -12,7 +12,7 @@ export const AboutEvent = () => {
   ]
 
   return (
-    <div className={styles.background}>
+    <div className={styles.background} id="sobre_evento">
       <div className={styles.content}>
         <h1 className={styles.title}>{Strings.AboutEventTitle}</h1>
         <p className={styles.description}>{Strings.AboutEventDescription}</p>

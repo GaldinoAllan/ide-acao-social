@@ -8,7 +8,7 @@
   z-index: 1000;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-  @media screen and (min-width: 1155px) {
+  @media screen and (min-width: 860px) {
     height: 4rem;
     padding: 0 2rem;
   }
@@ -117,7 +117,7 @@
     }
   }
 
-  @media screen and (min-width: 1155px) {
+  @media screen and (min-width: 860px) {
     max-width: 1440px;
     height: 4rem;
     margin: 0 auto;

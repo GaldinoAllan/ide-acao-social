@@ -20,24 +20,12 @@ export const HeaderContent: HeaderContentProps = {
   },
   items: [
     {
-      title: "Atendimento",
-      href: "/#atendimento",
+      title: "Sobre o evento",
+      href: "/#sobre_evento",
     },
     {
-      title: "Informar sinistro",
-      href: "/#sinistro",
-    },
-    {
-      title: "Seja um parceiro",
-      href: "/#seja-parceiro",
-    },
-    {
-      title: "Sobre",
-      href: "/#sobre",
-    },
-    {
-      title: "Solicitar cotação agora!",
-      href: "/cotacao",
+      title: "Como posso Ajudar?",
+      href: "/#como_ajudar",
     },
   ],
 };

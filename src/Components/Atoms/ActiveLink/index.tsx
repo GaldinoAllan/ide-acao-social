@@ -6,11 +6,11 @@ import Link, { LinkProps } from "next/link";
 interface ActiveLinkProps extends LinkProps {
   children: ReactElement
   activeClassName: string;
-  currentPath: string;
 }
 
-export function ActiveLink({ children, activeClassName, currentPath, ...rest }: ActiveLinkProps) {
-  const className = currentPath === rest.href
+export function ActiveLink({ children, activeClassName, ...rest }: ActiveLinkProps) {
+  const asPath = `/${window.location.hash}`
+  const className = asPath === rest.href
     ? activeClassName
     : ''
 
