@@ -23,7 +23,7 @@ export const Main = () => {
     <div className={styles.background}>
       <div className={styles.content}>
         <aside className={styles.rightContent}>
-          <div className={styles.imageTest}>
+          <div className={styles.socialLogoImage}>
             <Image
               src={titleImage}
               alt="Ide: Ação Social de Natal - O Amor que nos chaou a servir - 1 João 4:19"

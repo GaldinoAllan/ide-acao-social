@@ -6,6 +6,7 @@ import carrinhoAlegria from './carrinhoAlegria.jpeg'
 import corteCabelo from './corteCabelo.jpeg'
 import doces from './doces.jpeg'
 import helpImage from './helpImage.jpeg'
+import adBelemLogo from './adBelemLogo.png'
 
 export interface ImageInterface {
   id: string;
@@ -20,4 +21,5 @@ export class Images {
   static corteCabelo: ImageInterface = { id: uuidv4(), src: corteCabelo, caption: "Corte de Cabelo", imageAlt: "Corte de Cabelo" }
   static doces: ImageInterface = { id: uuidv4(), src: doces, caption: "Algodão doce", imageAlt: "Algodão doce" }
   static helpImage: ImageInterface = { id: uuidv4(), src: helpImage, caption: "Ajude com o que pode", imageAlt: "Ajude com o que pode" }
+  static adBelemLogo: ImageInterface = { id: uuidv4(), src: adBelemLogo, imageAlt: "Logo Assembléia de Deus ministério Belém" }
 }

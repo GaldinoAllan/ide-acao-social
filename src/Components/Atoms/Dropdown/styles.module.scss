@@ -1,0 +1,47 @@
+.dropdownContainer {
+  background: var(--orange-500);
+
+  list-style: none;
+  text-align: start;
+  
+  li {
+    width: 100%;
+  
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      cursor: pointer;
+    }
+  }
+
+  @media screen and (min-width: 968px) {
+    position: absolute;
+    top: 4rem;
+
+    div {
+      padding: 0 2rem;
+      
+      transition: background 0.2s;
+
+      &:last-child{
+        border-radius: 0 0 8px 8px;
+      }
+
+      &:hover{
+        background: var(--orange-500);
+      }
+    }
+
+    .clicked {
+      display: none;
+    }
+
+    .dropdownLink {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

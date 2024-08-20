@@ -5,8 +5,9 @@
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
-  padding: 20px;
+  position: relative;
+  padding: 56px 20px 20px;
+  border: 1px solid greenyellow;
 }
 
 .content {
@@ -29,8 +30,8 @@
   }
 }
 
-.imageTest {
-  max-height: 750px;
+.socialLogoImage {
+  max-height: 700px;
 }
 
 .buttonContainer {
@@ -57,7 +58,10 @@
 }
 
 .downArrows {
-  margin-top: 32px;
+  position: absolute;
+  bottom: 40px;
+  right: auto;
+  left: auto;
   display: flex;
   flex-direction: column;
   color: white;

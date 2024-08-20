@@ -9,19 +9,19 @@
   transition: background-color 0.3s;
 
   :disabled {
-    background-color: #d6d6d6;
+    background-color: var(--gray-100);
     cursor: not-allowed;
   }
 }
 
 .primary {
-  background-color: #b71a1a;
-  color: white;
+  background-color: var(--red-500);
+  color: var(--white);
 }
 
 .secondary {
-  background-color: #cf743c;
-  color: white;
+  background-color: var(--orange-500);
+  color: var(--white);
 }
 
 .button-icon {
