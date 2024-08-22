@@ -17,33 +17,30 @@ export function Header() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
-      console.log("Scroll Position:", scrollPosition);
-  
+      const header = document.getElementById("header");
+      const headerHeight = header ? header.offsetHeight : 0;
+
       let currentSection = "";
-      
-      document.querySelectorAll('div[id]').forEach((section) => {
+
+      document.querySelectorAll("div[id]").forEach((section) => {
         const sectionElement = section as HTMLElement;
-        const sectionTop = sectionElement.offsetTop - 400;
+        const sectionTop = sectionElement.offsetTop - headerHeight;
         const sectionHeight = sectionElement.offsetHeight;
         const sectionId = sectionElement.getAttribute('id');
-        
-        console.log("Checking section:", sectionId, "Top:", sectionTop, "Height:", sectionHeight);
-  
+
         if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-          console.log("section element", sectionElement)
           currentSection = sectionId!;
         }
       });
-  
+
       if (currentSection) {
-        console.log("Current section:", `/#${currentSection}`);
         setActiveLink(`/#${currentSection}`);
       }
     };
-    
+
     handleScroll();
     window.addEventListener('scroll', handleScroll);
-  
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -70,7 +67,7 @@ export function Header() {
   }
 
   return (
-    <header className={styles.headerContainer}>
+    <header className={styles.headerContainer} id='header'>
       <div className={styles.headerContent}>
         <div className={styles.imageContainer}>
           <Link href="/" className={styles.imageLink}>
