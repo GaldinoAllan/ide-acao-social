@@ -1,8 +1,5 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
 import "./global.scss";
-
-const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Ide Ação Social",
@@ -16,7 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={montserrat.className}>{children}</body>
+      <body>{children}</body>
     </html>
   );
 }
