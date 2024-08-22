@@ -28,11 +28,11 @@
 }
 
 .socialLogoImage {
-  max-height: 350px;
+  height: 350px;
   max-width: 1000px;
   
   @media (min-width: 860px) {
-    max-height: 700px;
+    height: 700px;
   }
 }
 
