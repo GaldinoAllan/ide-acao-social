@@ -1,24 +1,21 @@
-
 .background {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   position: relative;
   padding: 56px 20px 20px;
-  border: 1px solid greenyellow;
 }
 
 .content {
   max-width: 1440px;
   display: flex;  
   flex: 1;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-direction: row;
 }
 
-.rightContent {
+.leftContent {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -47,13 +44,12 @@
   width: 100%;
 }
 
-.leftContent {
+.rightContent {
   display: none;
-
+  
   @media (min-width: 860px) {
+    max-width: 500px;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;  
   }
 }
 

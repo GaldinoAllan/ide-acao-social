@@ -13,7 +13,7 @@ interface HeaderContentProps {
 }
 
 export const HeaderContent: HeaderContentProps = {
-  image: Images.adBelemLogo,
+  image: Images.adBelemShortLogo,
   inicio: {
     title: "Início",
     href: "/",

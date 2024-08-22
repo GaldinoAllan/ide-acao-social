@@ -7,6 +7,7 @@ import corteCabelo from './corteCabelo.jpeg'
 import doces from './doces.jpeg'
 import helpImage from './helpImage.jpeg'
 import adBelemLogo from './adBelemLogo.png'
+import adBelemShortLogo from './adBelemShortLogo.png'
 
 export interface ImageInterface {
   id: string;
@@ -22,4 +23,5 @@ export class Images {
   static doces: ImageInterface = { id: uuidv4(), src: doces, caption: "Algodão doce", imageAlt: "Algodão doce" }
   static helpImage: ImageInterface = { id: uuidv4(), src: helpImage, caption: "Ajude com o que pode", imageAlt: "Ajude com o que pode" }
   static adBelemLogo: ImageInterface = { id: uuidv4(), src: adBelemLogo, imageAlt: "Logo Assembléia de Deus ministério Belém" }
+  static adBelemShortLogo: ImageInterface = { id: uuidv4(), src: adBelemShortLogo, imageAlt: "Logo Assembléia de Deus ministério Belém" }
 }

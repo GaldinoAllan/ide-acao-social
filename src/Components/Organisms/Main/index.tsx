@@ -22,7 +22,7 @@ export const Main = () => {
   return (
     <div className={styles.background} id="/">
       <div className={styles.content}>
-        <aside className={styles.rightContent}>
+        <aside className={styles.leftContent}>
           <div className={styles.socialLogoImage}>
             <Image
               src={titleImage}
@@ -43,11 +43,11 @@ export const Main = () => {
             />
           </div>
         </aside>
-        <aside className={styles.leftContent}>
+        <aside className={styles.rightContent}>
           <Image
             src={jesusImage}
             alt="Jesus"
-            width={500}
+            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
           />
         </aside>
       </div>

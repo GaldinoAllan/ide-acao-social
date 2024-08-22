@@ -41,7 +41,11 @@ export function Header() {
       <div className={styles.headerContent}>
         <div className={styles.imageContainer}>
           <Link href="/">
-            <Image src={HeaderContent.image.src} alt={HeaderContent.image.imageAlt} />
+            <Image
+              src={HeaderContent.image.src}
+              alt={HeaderContent.image.imageAlt}
+              style={{ objectFit: "contain" }}
+            />
           </Link>
         </div>
         {isClicked ? (

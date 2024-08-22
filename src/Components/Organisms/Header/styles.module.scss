@@ -16,16 +16,16 @@
 
 .imageContainer {
   flex: 1;
-
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 4rem;
+  
   img {
-    width: 120px;
+    padding: 8px;
+    width: 4rem;
     cursor: pointer;
-  }
-
-  @media screen and (max-width: 400px) {
-    img {
-      width: 96px;
-    }
+    height: 4rem;
   }
 }
 
