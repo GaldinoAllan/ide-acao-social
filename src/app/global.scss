@@ -30,13 +30,21 @@
   }
 }
 
+@font-face {
+  font-family: 'ITC Avant Garde Gothic';
+  src: url('/fonts/ITCAvantGardeStd-Bk.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body {
   background: var(--white);
   color: var(--black);
 }
 
 body, button, p, input, textarea, select, label {
-  font: 400 1rem "Montserrat", sans-serif;
+  font: 400 1rem "ITC Avant Garde Gothic", sans-serif;
 }
 
 /* Chrome, Safari, Edge, Opera */
