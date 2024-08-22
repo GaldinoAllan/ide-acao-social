@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
           <Image
             src={adBelemImage}
             alt="Logo Assembléia de Deus ministério Belém"
-            width={400}
+            width={270}
           />
           <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" className={styles.iconLink}>
             <FaInstagram size={30} />
