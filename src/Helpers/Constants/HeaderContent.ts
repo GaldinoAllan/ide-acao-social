@@ -16,7 +16,7 @@ export const HeaderContent: HeaderContentProps = {
   image: Images.adBelemShortLogo,
   inicio: {
     title: "Início",
-    href: "/",
+    href: "/#inicio",
   },
   items: [
     {

@@ -20,7 +20,7 @@ export const Main = () => {
   }
 
   return (
-    <div className={styles.background} id="/">
+    <div className={styles.background} id="inicio">
       <div className={styles.content}>
         <aside className={styles.leftContent}>
           <div className={styles.socialLogoImage}>

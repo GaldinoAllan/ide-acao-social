@@ -1,12 +1,9 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { FiChevronDown, FiX, FiMenu, FiChevronUp } from 'react-icons/fi'
 import Link from "next/link";
-
-import { ActiveLink } from '../../Atoms/ActiveLink'
 import { Dropdown } from '../../Atoms/Dropdown'
-
 import { HeaderContent } from '../../../Helpers/Constants/HeaderContent'
 
 import styles from './styles.module.scss'
@@ -15,6 +12,42 @@ import Image from 'next/image';
 export function Header() {
   const [isClicked, setIsClicked] = useState<boolean>(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState<boolean>(false);
+  const [activeLink, setActiveLink] = useState<string>(""); // Estado para armazenar o link ativo
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      console.log("Scroll Position:", scrollPosition);
+  
+      let currentSection = "";
+      
+      document.querySelectorAll('div[id]').forEach((section) => {
+        const sectionElement = section as HTMLElement;
+        const sectionTop = sectionElement.offsetTop - 400;
+        const sectionHeight = sectionElement.offsetHeight;
+        const sectionId = sectionElement.getAttribute('id');
+        
+        console.log("Checking section:", sectionId, "Top:", sectionTop, "Height:", sectionHeight);
+  
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          console.log("section element", sectionElement)
+          currentSection = sectionId!;
+        }
+      });
+  
+      if (currentSection) {
+        console.log("Current section:", `/#${currentSection}`);
+        setActiveLink(`/#${currentSection}`);
+      }
+    };
+    
+    handleScroll();
+    window.addEventListener('scroll', handleScroll);
+  
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   function handleMenuClick() {
     setIsClicked(!isClicked);
@@ -40,7 +73,7 @@ export function Header() {
     <header className={styles.headerContainer}>
       <div className={styles.headerContent}>
         <div className={styles.imageContainer}>
-          <Link href="/">
+          <Link href="/" className={styles.imageLink}>
             <Image
               src={HeaderContent.image.src}
               alt={HeaderContent.image.imageAlt}
@@ -54,13 +87,13 @@ export function Header() {
           <FiMenu className={styles.hamburgerMenu} onClick={handleMenuClick} />
         )}
         <nav className={isClicked ? styles.menuIsOpen : ""}>
-          <ActiveLink
-            activeClassName={styles.active}
+          <Link
             href={HeaderContent.inicio.href}
-            legacyBehavior
+            className={activeLink === HeaderContent.inicio.href ? styles.active : ""}
+            onClick={() => setActiveLink(HeaderContent.inicio.href)}
           >
-            <a>{HeaderContent.inicio.title}</a>
-          </ActiveLink>
+            {HeaderContent.inicio.title}
+          </Link>
           {HeaderContent.dropdown && (
             <div
               className={styles.dropdown}
@@ -76,14 +109,14 @@ export function Header() {
             </div>
           )}
           {HeaderContent.items.map((item) => (
-            <ActiveLink
-              activeClassName={styles.active}
+            <Link
               href={item.href}
               key={item.title}
-              legacyBehavior
+              className={activeLink === item.href ? styles.active : ""}
+              onClick={() => setActiveLink(item.href)}
             >
-              <a>{item.title}</a>
-            </ActiveLink>
+              {item.title}
+            </Link>
           ))}
         </nav>
       </div>
