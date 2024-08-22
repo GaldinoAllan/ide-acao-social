@@ -27,7 +27,7 @@ export const Main = () => {
             <Image
               src={titleImage}
               alt="Ide: Ação Social de Natal - O Amor que nos chaou a servir - 1 João 4:19"
-              style={{ width: '100%', objectFit: 'contain' }}
+              style={{ width: '100%', maxHeight: '100%', objectFit: 'contain' }}
 
             />
           </div>

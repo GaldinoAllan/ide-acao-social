@@ -45,9 +45,12 @@
 
 .buttonContent {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
-  width: 400px;
+
+  @media (min-width: 860px) {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .imageContainer {

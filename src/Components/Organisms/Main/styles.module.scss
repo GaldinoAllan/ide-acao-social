@@ -28,7 +28,12 @@
 }
 
 .socialLogoImage {
-  max-height: 700px;
+  max-height: 350px;
+  max-width: 1000px;
+  
+  @media (min-width: 860px) {
+    max-height: 700px;
+  }
 }
 
 .buttonContainer {
@@ -55,10 +60,14 @@
 
 .downArrows {
   position: absolute;
-  bottom: 40px;
+  bottom: 0;
   right: auto;
   left: auto;
   display: flex;
   flex-direction: column;
   color: white;
+
+  @media (min-width: 860px) {
+    bottom: 40px;
+  }
 }
