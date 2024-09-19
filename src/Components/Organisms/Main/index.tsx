@@ -31,10 +31,6 @@ export const Main = () => {
 
             />
           </div>
-          <div className={styles.buttonContainer}>
-            <Button text="Como contribuir" onClick={() => handleContributeClick} />
-            <Button text="PDF" onClick={() => handlePDFClick} styleType='secondary' />
-          </div>
           <div className={styles.adBelemLogoContainer}>
             <Image
               src={adBelemImage}
