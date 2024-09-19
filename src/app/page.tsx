@@ -5,6 +5,7 @@ import { HowToHelp } from "../Components/Organisms/HowToHelp";
 import { Footer } from "../Components/Organisms/Footer";
 import ProgressBar from "../Components/Organisms/ProgressBar";
 import styles from "./styles.module.scss";
+import { EventLocation } from "../Components/Organisms/EventLocation";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
         <Main />
         <AboutEvent />
         <HowToHelp />
+        <EventLocation />
         <ProgressBar />
         <Footer />
       </div>
