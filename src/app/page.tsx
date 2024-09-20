@@ -3,7 +3,7 @@ import { Main } from "../Components/Organisms/Main";
 import { AboutEvent } from "../Components/Organisms/AboutEvent";
 import { HowToHelp } from "../Components/Organisms/HowToHelp";
 import { Footer } from "../Components/Organisms/Footer";
-
+import ProgressBar from "../Components/Organisms/ProgressBar";
 import styles from "./styles.module.scss";
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
         <Main />
         <AboutEvent />
         <HowToHelp />
+        <ProgressBar />
         <Footer />
       </div>
     </main>
