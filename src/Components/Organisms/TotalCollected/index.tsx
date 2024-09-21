@@ -5,9 +5,15 @@ import styles from "./styles.module.scss"
 import { Strings } from '../../../Helpers/Strings';
 
 export const TotalCollected = () => {
-  const [progress, setProgress] = useState(0);
-  const [totalRaised, setTotalRaised] = useState(0);
+  const [progress, setProgress] = useState(29.94);
+  const [totalRaised, setTotalRaised] = useState(20000);
   const goal = 65000;
+  const progressWidth = `${Math.min(progress, 100)}%`
+  const percentageProgress = `${Math.min(progress, 100).toFixed(2)}%`
+  const progressBarColor = progress > 50 ? '#76c7c0' : '#f76262'
+  const totalRaisedString = totalRaised.toLocaleString('pt-BR', { minimumFractionDigits: 2 })
+  const goalString = goal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })
+  const compareGoalString = `R$ ${totalRaisedString} / ${goalString}`
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,17 +44,15 @@ export const TotalCollected = () => {
           <div
             className={styles.progressBar}
             style={{
-              width: `${Math.min(progress, 100)}%`, // Limita o valor em 100%
-              backgroundColor: progress > 50 ? '#76c7c0' : '#f76262', // Cor com base no progresso
+              width: progressWidth,
+              backgroundColor: progressBarColor,
             }}
           >
-            {Math.min(progress, 100).toFixed(2)}%
+            {percentageProgress}
           </div>
         </div>
 
-        <div className={styles.totalRaised}>
-          R$ {totalRaised.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} / {goal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}
-        </div>
+        <div className={styles.totalRaised}>{compareGoalString}</div>
       </div>
     </div>
   );

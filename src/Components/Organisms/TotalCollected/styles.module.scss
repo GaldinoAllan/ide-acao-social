@@ -9,13 +9,10 @@
 
 .content {
   max-width: 1440px;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 64px;
-
-  @media (min-width: 860px) {
-    grid-template-columns: 4fr 1.5fr;  
-  }
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title {
@@ -27,25 +24,31 @@
 
 
 .progressContainer {
-  width: 1000px; 
   background-color: #e0e0df;
-  border-radius: 5px;
-  overflow: hidden;
+  border-radius: 12px;
+  max-width: 1000px;
+  align-self: center;
+  justify-self: center;
+  width: 100%;
 }
 
 .progressBar {
   height: 24px;
-  border-radius: 5px;
+  border-radius: 12px;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
+  color: black;
   font-weight: bold;
 }
 
 .totalRaised {
+  margin: 32px 0;
   font-size: 32px;
   font-weight: bold;
-  margin-bottom: 32px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
