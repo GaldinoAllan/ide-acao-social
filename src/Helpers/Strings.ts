@@ -12,9 +12,14 @@ export enum Strings {
   // MARK: Event Location
   EventLocationTitle = "Local do Evento",
   EventLocationAddress = "Endereço: R. Hermantino Prado, 89-299 - Jardim Carlos Lourenço, Campinas - SP, 13101-107",
+  EventLocationDate = "Data: 14 de Dezembro de 2024",
   EventLocationButtonName = "Como chegar no local?",
   EventLatLong = '-22.926086,-47.021051',
   EventLocationGoogleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${Strings.EventLatLong}`,
+
+  // MARK: Total Collected
+  TotalCollectedTitle = "Total Arrecadado",
+  GoogleApiUrlPath = '/api/getProgressBarValue',
 
   // MARK: Footer
   FooterCopyRight = "© 2024 Ide Ação Social AD Carlos Lourenço. Todos os direitos reservados.",
