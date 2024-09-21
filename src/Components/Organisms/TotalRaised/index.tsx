@@ -5,8 +5,8 @@ import styles from "./styles.module.scss"
 import { Strings } from '../../../Helpers/Strings';
 
 export const TotalRaised = () => {
-  const [progress, setProgress] = useState(29.945123);
-  const [totalRaised, setTotalRaised] = useState(20000);
+  const [progress, setProgress] = useState(0);
+  const [totalRaised, setTotalRaised] = useState(0);
   const [goal, setGoal] = useState(0);
   const percentageProgress = `${progress.toFixed(2)}%`
   const totalRaisedString = `Arrecadado: R$ ${totalRaised.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`
