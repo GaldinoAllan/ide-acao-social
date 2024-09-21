@@ -4,21 +4,18 @@ import { useState, useEffect } from 'react';
 import styles from "./styles.module.scss"
 import { Strings } from '../../../Helpers/Strings';
 
-export const TotalCollected = () => {
-  const [progress, setProgress] = useState(29.94);
+export const TotalRaised = () => {
+  const [progress, setProgress] = useState(29.945123);
   const [totalRaised, setTotalRaised] = useState(20000);
   const goal = 65000;
-  const progressWidth = `${Math.min(progress, 100)}%`
-  const percentageProgress = `${Math.min(progress, 100).toFixed(2)}%`
-  const progressBarColor = progress > 50 ? '#76c7c0' : '#f76262'
-  const totalRaisedString = totalRaised.toLocaleString('pt-BR', { minimumFractionDigits: 2 })
-  const goalString = goal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })
-  const compareGoalString = `R$ ${totalRaisedString} / ${goalString}`
+  const percentageProgress = `${progress.toFixed(2)}%`
+  const totalRaisedString = `Arrecadado: R$ ${totalRaised.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`
+  const goalString = `Meta: R$ ${goal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('/api/getProgressBarValue');
+        const response = await fetch(Strings.GoogleApiUrlPath);
         const data = await response.json();
 
         data.value = data.value.replace(/[R$\s]/g, '')
@@ -39,20 +36,18 @@ export const TotalCollected = () => {
     <div className={styles.background} id="como_ajudar">
       <div className={styles.content}>
         <h1 className={styles.title}>{Strings.TotalCollectedTitle}</h1>
-
         <div className={styles.progressContainer}>
           <div
             className={styles.progressBar}
-            style={{
-              width: progressWidth,
-              backgroundColor: progressBarColor,
-            }}
+            style={{ width: percentageProgress }}
           >
             {percentageProgress}
           </div>
         </div>
-
-        <div className={styles.totalRaised}>{compareGoalString}</div>
+        <div className={styles.totalRaisedContainer}>
+          <div className={styles.totalRaised}>{totalRaisedString}</div>
+          <div className={styles.totalRaised}>{goalString}</div>
+        </div>
       </div>
     </div>
   );

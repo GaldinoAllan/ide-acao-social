@@ -38,17 +38,19 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
+  color: #3e3e3e;
   font-weight: bold;
+  background-color: #76c7c0;
+}
+
+.totalRaisedContainer {
+  margin: 32px 0;
 }
 
 .totalRaised {
-  margin: 32px 0;
-  font-size: 32px;
+  margin: 8px 0;
+  font-size: 24px;
   font-weight: bold;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100%;
 }

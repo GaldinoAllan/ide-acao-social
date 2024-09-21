@@ -16,6 +16,7 @@ export const EventLocation = () => {
         <>
           <h1 className={styles.title}>{Strings.EventLocationTitle}</h1>
           <p className={styles.description}>{Strings.EventLocationAddress}</p>
+          <p className={styles.description}>{Strings.EventLocationDate}</p>
           <a href={Strings.EventLocationGoogleMapsUrl} target="_blank" rel="noopener noreferrer" className={styles.buttonContainer}>
             <Button text={Strings.EventLocationButtonName} onClick={handleHowToGetThereButtonClick} styleType="primary" />
           </a>

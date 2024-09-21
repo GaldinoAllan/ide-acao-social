@@ -3,7 +3,7 @@ import { Main } from "../Components/Organisms/Main";
 import { AboutEvent } from "../Components/Organisms/AboutEvent";
 import { HowToHelp } from "../Components/Organisms/HowToHelp";
 import { Footer } from "../Components/Organisms/Footer";
-import { TotalCollected } from "../Components/Organisms/TotalCollected";
+import { TotalRaised } from "../Components/Organisms/TotalRaised";
 import styles from "./styles.module.scss";
 import { EventLocation } from "../Components/Organisms/EventLocation";
 
@@ -16,7 +16,7 @@ export default function Home() {
         <AboutEvent />
         <HowToHelp />
         <EventLocation />
-        <TotalCollected />
+        <TotalRaised />
         <Footer />
       </div>
     </main>
