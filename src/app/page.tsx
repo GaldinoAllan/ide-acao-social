@@ -3,8 +3,9 @@ import { Main } from "../Components/Organisms/Main";
 import { AboutEvent } from "../Components/Organisms/AboutEvent";
 import { HowToHelp } from "../Components/Organisms/HowToHelp";
 import { Footer } from "../Components/Organisms/Footer";
-import ProgressBar from "../Components/Organisms/ProgressBar";
+import { TotalRaised } from "../Components/Organisms/TotalRaised";
 import styles from "./styles.module.scss";
+import { EventLocation } from "../Components/Organisms/EventLocation";
 
 export default function Home() {
   return (
@@ -14,7 +15,8 @@ export default function Home() {
         <Main />
         <AboutEvent />
         <HowToHelp />
-        <ProgressBar />
+        <EventLocation />
+        <TotalRaised />
         <Footer />
       </div>
     </main>

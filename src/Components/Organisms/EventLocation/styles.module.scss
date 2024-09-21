@@ -1,0 +1,48 @@
+
+.background {
+  margin-top: 64px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  max-width: 1440px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: white;
+}
+
+.description {
+  font-size: 24px;
+  color: white;
+}
+
+.buttonContainer {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: 860px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+}
+
+.imageContainer {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
