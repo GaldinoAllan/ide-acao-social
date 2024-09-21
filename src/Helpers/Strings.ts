@@ -16,6 +16,9 @@ export enum Strings {
   EventLatLong = '-22.926086,-47.021051',
   EventLocationGoogleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${Strings.EventLatLong}`,
 
+  // MARK: Total Collected
+  TotalCollectedTitle = "Total Arrecadado",
+
   // MARK: Footer
   FooterCopyRight = "© 2024 Ide Ação Social AD Carlos Lourenço. Todos os direitos reservados.",
   InstagramLink = "https://www.instagram.com/acaosocial.ide?igsh=MWE1MGl3dnNydHgwZQ==",

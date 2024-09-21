@@ -1,0 +1,51 @@
+.background {
+  margin-top: 64px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.content {
+  max-width: 1440px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 64px;
+
+  @media (min-width: 860px) {
+    grid-template-columns: 4fr 1.5fr;  
+  }
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: white;
+}
+
+
+.progressContainer {
+  width: 1000px; 
+  background-color: #e0e0df;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 24px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+
+.totalRaised {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 32px;
+  color: white;
+}
