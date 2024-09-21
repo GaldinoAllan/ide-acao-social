@@ -16,16 +16,15 @@ export const EventLocation = () => {
         <>
           <h1 className={styles.title}>{Strings.EventLocationTitle}</h1>
           <p className={styles.description}>{Strings.EventLocationAddress}</p>
-          <div className={styles.buttonContainer}>
+          <a href={Strings.EventLocationGoogleMapsUrl} target="_blank" rel="noopener noreferrer" className={styles.buttonContainer}>
             <Button text={Strings.EventLocationButtonName} onClick={handleHowToGetThereButtonClick} styleType="primary" />
-          </div>
+          </a>
         </>
         <div className={styles.imageContainer}>
           <Image
             src={Images.eventLocationMap.src}
             alt={Images.eventLocationMap.imageAlt}
-            style={{ objectFit: 'cover' }}
-          // fill
+            style={{ width: '100%', height: "100%", objectFit: 'contain' }}
           />
         </div>
       </div>
