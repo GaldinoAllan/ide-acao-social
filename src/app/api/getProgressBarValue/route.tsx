@@ -1,9 +1,5 @@
 import { google } from 'googleapis';
 import { NextResponse } from 'next/server';
-import fs from 'fs';
-import path from 'path';
-
-const keyFilePath = path.join(process.cwd(), 'acao-social-natal-a3bd4f3b9657.json');
 
 export async function GET() {
   try {
