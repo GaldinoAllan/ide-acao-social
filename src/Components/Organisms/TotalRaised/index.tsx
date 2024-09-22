@@ -14,21 +14,21 @@ export const TotalRaised = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      // TODO: `goal` should be fetched from the server
-      const goal = 65000
-      setGoal(goal)
-
       try {
         const response = await fetch(Strings.GoogleApiUrlPath);
         const data = await response.json();
 
-        data.value = data.value.replace(/[R$\s]/g, '')
+        const totalRaised = data.totalRaised.replace(/[R$\s]/g, '')
           .replace(/\./g, '')
-          .replace(/,/g, '.')
+          .replace(/,/g, '.');
 
-        setGoal(goal)
-        setTotalRaised(Number(data.value));
-        setProgress((Number(data.value) / goal) * 100);
+        const goal = data.goal.replace(/[R$\s]/g, '')
+          .replace(/\./g, '')
+          .replace(/,/g, '.');
+
+        setGoal(Number(goal));
+        setTotalRaised(Number(totalRaised));
+        setProgress((Number(totalRaised) / goal) * 100);
       } catch (error) {
         console.error('Failed to fetch progress data', error);
       }

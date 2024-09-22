@@ -7,15 +7,19 @@ const keyFilePath = path.join(process.cwd(), 'acao-social-natal-a3bd4f3b9657.jso
 
 export async function GET() {
   try {
-    // Autenticação usando a chave de API do Google
+    // Autenticação usando as variáveis de ambiente
     const auth = new google.auth.GoogleAuth({
-      keyFile: keyFilePath,
-      scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],  // Permissão de leitura
+      credentials: {
+        private_key: process.env.GCP_PRIVATE_KEY.replace(/\\n/gm, '\n'),
+        client_email: process.env.GCP_CLIENT_EMAIL,
+      },
+      projectId: process.env.GCP_PROJECT_ID,
+      scopes: ['https://www.googleapis.com/auth/spreadsheets.readonly'],
     });
 
     const sheets = google.sheets({ version: 'v4', auth });
     const spreadsheetId = '1xacNyd-nnn2NprkPpVTpeN7CH_FjVa1GgLrCgLpM9Yc';  // Substitua pelo ID real da sua planilha
-    const range = 'Dashboard!G18:H19';  // Substitua com o intervalo desejado
+    const range = 'Dashboard!G16:H19';  // Substitua com o intervalo desejado
 
     // Fazendo a requisição para obter os valores
     const response = await sheets.spreadsheets.values.get({
@@ -24,10 +28,11 @@ export async function GET() {
     });
 
     // Obtendo o valor retornado pela planilha
-    const value = response.data.values[0][0];
+    const goal = response.data.values[0][0];
+    const totalRaised = response.data.values[2][0];
 
     // Retornando a resposta JSON com o valor da célula
-    return NextResponse.json({ value });
+    return NextResponse.json({ totalRaised, goal });
 
   } catch (error) {
     // Log de erro para ajudar no debug
