@@ -9,8 +9,7 @@ export const TotalRaised = () => {
   const [totalRaised, setTotalRaised] = useState(0);
   const [goal, setGoal] = useState(0);
   const percentageProgress = `${progress.toFixed(2)}%`
-  const totalRaisedString = `Arrecadado: R$ ${totalRaised.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`
-  const goalString = `Meta: R$ ${goal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`
+  const raisedAndGoal = `R$ ${totalRaised.toLocaleString('pt-BR', { minimumFractionDigits: 2 })} / ${goal.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}`;
 
   useEffect(() => {
     const fetchData = async () => {
@@ -38,20 +37,19 @@ export const TotalRaised = () => {
   }, []);
 
   return (
-    <div className={styles.background} id="como_ajudar">
+    <div className={styles.background} id="total_arrecadado">
       <div className={styles.content}>
         <h1 className={styles.title}>{Strings.TotalCollectedTitle}</h1>
         <div className={styles.progressContainer}>
           <div
             className={styles.progressBar}
-            style={{ width: percentageProgress }}
+            style={{ width: percentageProgress, fontSize: "24px"}}
           >
             {percentageProgress}
           </div>
         </div>
         <div className={styles.totalRaisedContainer}>
-          <div className={styles.totalRaised}>{totalRaisedString}</div>
-          <div className={styles.totalRaised}>{goalString}</div>
+          <div className={styles.totalRaised}>{raisedAndGoal}</div>
         </div>
       </div>
     </div>

@@ -15,8 +15,8 @@ export default function Home() {
         <Main />
         <AboutEvent />
         <HowToHelp />
-        <EventLocation />
         <TotalRaised />
+        <EventLocation />
         <Footer />
       </div>
     </main>

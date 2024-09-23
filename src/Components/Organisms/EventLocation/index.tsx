@@ -11,7 +11,7 @@ export const EventLocation = () => {
   };
 
   return (
-    <div className={styles.background} id="location">
+    <div className={styles.background} id="local">
       <div className={styles.content}>
         <>
           <h1 className={styles.title}>{Strings.EventLocationTitle}</h1>
@@ -25,7 +25,7 @@ export const EventLocation = () => {
           <Image
             src={Images.eventLocationMap.src}
             alt={Images.eventLocationMap.imageAlt}
-            style={{ width: '100%', height: "100%", objectFit: 'contain' }}
+            style={{ width: '50%', height: "50%", objectFit: 'contain' }}
           />
         </div>
       </div>

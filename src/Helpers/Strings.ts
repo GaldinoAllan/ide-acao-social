@@ -1,7 +1,7 @@
 export enum Strings {
   // MARK: AboutEvent
   AboutEventTitle = "O que é?",
-  AboutEventDescription = "O Ide: Ação Social de Natal é um projeto que nasceu no coração de Deus, com o objetivo de torná-Lo conhecido através do amor e do trabalho voluntário. Para tal, todos os membros da congregação da Assembleia de Deus, Ministério do Bélem, do bairro Jardim Carlos Lourenço, uniram-se para realizar este evento, que impactará toda a comunidade. Haverá atrações para as crianças, distribuição de alimentos e serviços sociais, oferecendo bem-estar físico, emocional e espiritual à toda a população que estiver presente. Além disso, este ano o tema será a celebração do nascimento de Jesus, por meio de uma cantata de Natal, que está sendo preparada pela própria congregação. Esperamos você!",
+  AboutEventDescription = "O Ide: Ação Social de Natal é um projeto que nasceu no coração de Deus, com o objetivo de torná-Lo conhecido através do amor e do trabalho voluntário. Para tal, todos os membros da congregação da Assembleia de Deus, Ministério do Bélem, do bairro Jardim Carlos Lourenço, uniram-se para realizar este evento, que impactará toda a comunidade e, neste ano, acontecerá no dia 14 de dezembro. Haverá atrações para as crianças, distribuição de alimentos e serviços sociais, oferecendo bem-estar físico, emocional e espiritual à toda a população que estiver presente. Além disso, este ano o tema será a celebração do nascimento de Jesus, por meio de uma cantata de Natal, que está sendo preparada pela própria congregação. Esperamos você!",
 
   // MARK: HowToHelp
   HowToHelpTitle = "Como e por que ajudar?",

@@ -27,7 +27,7 @@ export const HowToHelp = () => {
           ))}
           <div className={styles.buttonContainer}>
             <div className={styles.buttonContent}>
-              <Button text="Quero ajudar de alguma forma" onClick={handleHelpButtonClick} styleType="secondary" />
+              <Button text="Quero ajudar!" onClick={handleHelpButtonClick} styleType="secondary" />
             </div>
           </div>
         </div>
