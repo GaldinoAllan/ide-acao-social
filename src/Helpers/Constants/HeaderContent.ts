@@ -28,7 +28,7 @@ export const HeaderContent: HeaderContentProps = {
       href: "/#como_ajudar",
     },
     {
-      title: "Total arrecadado",
+      title: "Percentual arrecadado",
       href: "/#total_arrecadado",
     },
     {

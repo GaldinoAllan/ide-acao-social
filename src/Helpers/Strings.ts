@@ -18,7 +18,7 @@ export enum Strings {
   EventLocationGoogleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${Strings.EventLatLong}`,
 
   // MARK: Total Collected
-  TotalCollectedTitle = "Total Arrecadado",
+  TotalCollectedTitle = "Percentual Arrecadado",
   GoogleApiUrlPath = '/api/getProgressBarValue',
 
   // MARK: Footer

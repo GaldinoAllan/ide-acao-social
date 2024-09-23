@@ -48,9 +48,6 @@ export const TotalRaised = () => {
             {percentageProgress}
           </div>
         </div>
-        <div className={styles.totalRaisedContainer}>
-          <div className={styles.totalRaised}>{raisedAndGoal}</div>
-        </div>
       </div>
     </div>
   );
