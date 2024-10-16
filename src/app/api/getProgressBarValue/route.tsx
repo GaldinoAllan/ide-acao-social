@@ -28,7 +28,9 @@ export async function GET() {
     const totalRaised = response.data.values[2][0];
 
     // Retornando a resposta JSON com o valor da célula
-    return NextResponse.json({ totalRaised, goal });
+    const res = NextResponse.json({ totalRaised, goal })
+    res.headers.set('Cache-Control', 'no-cache');
+    return res;
 
   } catch (error) {
     // Log de erro para ajudar no debug
