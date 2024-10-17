@@ -1,5 +1,7 @@
 import { google } from 'googleapis';
+import { headers } from 'next/headers';
 import { NextResponse } from 'next/server';
+import { json } from 'stream/consumers';
 
 export async function GET() {
   try {
@@ -28,15 +30,19 @@ export async function GET() {
     const totalRaised = response.data.values[2][0];
 
     // Retornando a resposta JSON com o valor da célula
-    const res = NextResponse.json({ totalRaised, goal })
-    res.headers.set('Cache-Control', 'no-store');
-    return res;
+    return new Response(JSON.stringify({ totalRaised, goal }), {
+        status: 200,
+        headers: {
+          'Cache-Control': 'public, s-maxage=1',
+          'Vercel-CDN-Cache-Control': 'public, s-maxage=1',
+        },
+      });
 
   } catch (error) {
     // Log de erro para ajudar no debug
     console.error('Erro ao acessar Google Sheets:', error);
 
     // Retorna um erro 500 com uma mensagem
-    return NextResponse.json({ error: 'Failed to fetch data from Google Sheets' }, { status: 500 });
+    return Response.json({ error: 'Failed to fetch data from Google Sheets' }, { status: 500 });
   }
 }
