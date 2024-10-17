@@ -29,7 +29,7 @@ export async function GET() {
 
     // Retornando a resposta JSON com o valor da célula
     const res = NextResponse.json({ totalRaised, goal })
-    res.headers.set('Cache-Control', 'no-cache');
+    res.headers.set('Cache-Control', 'no-store');
     return res;
 
   } catch (error) {

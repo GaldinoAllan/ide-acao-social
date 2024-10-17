@@ -14,7 +14,11 @@ export const TotalRaised = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(Strings.GoogleApiUrlPath);
+        const response = await fetch(Strings.GoogleApiUrlPath, {
+            method: 'GET',
+            cache: 'no-store', // Desativa qualquer tipo de cache para a requisição
+        });        
+        
         const data = await response.json();
 
         const totalRaised = data.totalRaised.replace(/[R$\s]/g, '')
