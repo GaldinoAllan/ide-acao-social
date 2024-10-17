@@ -1,7 +1,6 @@
 import { google } from 'googleapis';
-import { headers } from 'next/headers';
-import { NextResponse } from 'next/server';
-import { json } from 'stream/consumers';
+
+export const revalidate = 0; // Indica que não deve ser usado cache para esta rota
 
 export async function GET() {
   try {
